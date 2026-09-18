@@ -30,6 +30,8 @@ jobs:
           echo direct > _site/sage/ecard/direct.txt
           mkdir -p _site/foo
           echo foo > _site/foo/bar.txt
+          mkdir -p _site/foo/sub
+          echo deep > _site/foo/sub/deep.txt
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

@@ -21,15 +21,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Prepare site
+      - name: Prepare site under /ecard
         run: |
           mkdir -p _site/ecard
-          cp -r sage/ecard/* _site/ecard/
+          cp -r ecard/* _site/ecard/
           cp .nojekyll _site/.nojekyll
-          echo test > _site/health.txt
-          mkdir -p _site/foo/sub
-          echo foo > _site/foo/bar.txt
-          echo deep > _site/foo/sub/deep.txt
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
